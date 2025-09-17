@@ -12,4 +12,5 @@ RUN npm install #Instala las dependencias del proyecto
 COPY server.js /usr/src/app
 
 EXPOSE $PORT
-CMD [ "npm", "start" ] #Comando por defecto al ejecturar el contenedor
+CMD [ "npm", "start" ] #Comando por defecto al ejecturar el contenedor aaa
+
