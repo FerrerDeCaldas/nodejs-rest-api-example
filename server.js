@@ -21,10 +21,26 @@ app.get('/:id', function (req, res) {
   res.end(JSON.stringify(response))
 })
 
+app.get('/:id', function (req, res) {
+  console.log('GET /:id request received')
+  res.writeHead(200, {'Content-Type': 'application/json'})
+  var response = { "response" : "This is GET mJKSGJHSFKFGJSFKLJGBSFJIOPHBJDFKOPFHKDJL with id=" + req.params.id + "." }
+  console.log(response)
+  res.end(JSON.stringify(response))
+})
+
 app.post('/', function (req, res) {
   console.log('POST request received')
   res.writeHead(200, {'Content-Type': 'application/json'})
   var response = { "response" : "This is POST method." }
+  console.log(response)
+  res.end(JSON.stringify(response))
+})
+
+app.post('/', function (req, res) {
+  console.log('POST request received')
+  res.writeHead(200, {'Content-Type': 'application/json'})
+  var response = { "response" : "AAAA." }
   console.log(response)
   res.end(JSON.stringify(response))
 })
